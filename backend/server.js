@@ -16,7 +16,7 @@ connectCloudinary()
 // middlewares
 app.use(express.json())
 
-// CORS configuration - UPDATED
+// CORS configuration 
 app.use(cors({
     origin: [
         'https://prescripto-doctor-booking-system-li.vercel.app',
