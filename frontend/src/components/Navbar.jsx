@@ -14,6 +14,12 @@ const Navbar = () => {
         setToken(false)
         localStorage.removeItem('token')
     }
+
+    
+  const handleAdminPanel = () => {
+    window.open("https://prescripto-doctor-booking-system-li.vercel.app/", "_blank");
+  };
+
     
 
   return (
@@ -47,6 +53,15 @@ const Navbar = () => {
                 </li>
                 <hr  className='border-none outline-none h-0.5 w-3/5 m-auto bg-primary hidden' />
             </NavLink>
+
+            <li className="py-1 flex items-center">
+          <button
+            onClick={handleAdminPanel}
+            className="bg-gradient-to-r from-primary to-primary text-white px-3 py-1.5 rounded-lg font-medium hover:from-primary hover:to-primary hover:shadow-lg transform hover:scale-105 transition-all duration-300 relative z-30 text-xs border border-transparent hover:border-white/20"
+          >
+             Admin
+          </button>
+        </li>
         </ul>
         <div className='flex items-center gap-4'>
             {
