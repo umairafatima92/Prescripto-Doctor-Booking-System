@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(cors({
     origin: [
         'https://prescripto-doctor-booking-system-li.vercel.app/',
-        'http://localhost:5174', // for local development
+        'https://prescripto-doctor-booking-system-cv.vercel.app/'
         
     ],
     credentials: true,
