@@ -9,29 +9,32 @@ import userRouter from './routes/userRoute.js'
 
 // app config
 const app = express()
-const port =process.env.PORT || 4000
+const port = process.env.PORT || 4000
 connectDB()
 connectCloudinary()
 
-
 // middlewares
-
 app.use(express.json())
-app.use(cors())
+
+// CORS configuration - UPDATED
+app.use(cors({
+    origin: [
+        'https://prescripto-doctor-booking-system-li.vercel.app',
+        'http://localhost:5173', // for local development
+        'http://localhost:3000'  // alternative local port
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}))
 
 // api endpoint
-app.use('/api/admin',adminRouter)
-app.use('/api/doctor',doctorRouter)
-app.use('/api/user',userRouter)
+app.use('/api/admin', adminRouter)
+app.use('/api/doctor', doctorRouter)
+app.use('/api/user', userRouter)
 
-
-
-
-
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.send('API WORKING')
-
 })
 
-
-app.listen(port,()=>console.log("Server Started on PORT",port))
+app.listen(port, () => console.log("Server Started on PORT", port))
