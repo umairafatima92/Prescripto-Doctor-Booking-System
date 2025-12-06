@@ -19,8 +19,8 @@ app.use(express.json())
 // CORS configuration - UPDATED
 app.use(cors({
     origin: [
-        'https://prescripto-doctor-booking-system-li.vercel.app/',
-        'https://prescripto-doctor-booking-system-cv.vercel.app/'
+        'https://prescripto-doctor-booking-system-li.vercel.app',
+        'https://prescripto-doctor-booking-system-cv.vercel.app'
         
     ],
     credentials: true,
