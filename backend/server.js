@@ -23,13 +23,14 @@ app.use(
       "https://prescripto-doctor-booking-system-v7.vercel.app",
       "https://prescripto-doctor-booking-system-tq.vercel.app",
       "http://localhost:5174",
-      " http://localhost:5173",
+      "http://localhost:5173",
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 
 // api endpoint
 app.use("/api/admin", adminRouter);
