@@ -17,7 +17,7 @@ const Navbar = () => {
 
     
   const handleAdminPanel = () => {
-    window.open("https://prescripto-doctor-booking-system-v7.vercel.app/", "_blank");
+    window.open("https://prescripto-doctor-booking-system-v7.vercel.app", "_blank");
   };
 
     

@@ -20,8 +20,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://prescripto-doctor-booking-system-v7.vercel.app/",
-      "https://prescripto-doctor-booking-system-tq.vercel.app/",
+      "https://prescripto-doctor-booking-system-v7.vercel.app",
+      "https://prescripto-doctor-booking-system-tq.vercel.app",
       "http://localhost:5174",
       " http://localhost:5173",
     ],
